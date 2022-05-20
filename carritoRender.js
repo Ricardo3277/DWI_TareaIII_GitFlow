@@ -40,6 +40,12 @@ const baseDato = [{
         Imagen: "Images/Audiculares.jpg"
 
     },
+    {
+        id: 7,
+        nombre: 'Audiculares XBOX',
+        precio: 3200,
+        Imagen: "Images/XboxHeadSet.jpg"
+    },
 ]
 
 let carrito = []
@@ -159,7 +165,7 @@ function renderizarCarrito() {
 
         //Agregar boton para eliminar producto del carrito
         const btnEliminar = document.createElement('button')
-        //Agregamos estilo al boton (rojito)
+            //Agregamos estilo al boton (rojito)
         btnEliminar.classList.add('btn', 'btn-danger')
         btnEliminar.textContent = 'X'
         btnEliminar.dataset.item = item
@@ -198,7 +204,7 @@ function calcularTotales() {
         const NewItem = baseDato.filter((itemBaseDatos) => {
             return itemBaseDatos.id === parseInt(item)
         })
-        return total + NewItem[0].precio 
+        return total + NewItem[0].precio
     }, 0)
 }
 
